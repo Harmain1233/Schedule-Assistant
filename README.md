@@ -9,6 +9,10 @@ An innovative solution to the constant hurdle of students waiting weeks on end f
 ### Technologies Used
 - **HTML, CSS, JavaScript**
 
+  ## Updates
+
+During my Human Computer Interaction class, I learned that the interface being easy to use is an important aspect of the design of the website. Thinking about this project, I realized that having users enter in each task they have taken was time-consuming and unnecessary. Therefore, I updated the interface to allow users to simply select the courses they've taken. 
+
 ###  Website Link
 https://harmain1233.github.io/Schedule-Assistant/
     
