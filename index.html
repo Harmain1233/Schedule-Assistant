@@ -4,318 +4,215 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Semester Schedule Planner</title>
+<link rel="shortcut icon" href="#">
 <link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/5d7f826647.js" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
+    <script src="index.js"></script>
+    <h1>Welcome to Schedule Assistant</h1>
+    <h2>Please Select the Courses You've Taken</h2>
+    <form id="scheduleForm">
+    <div class="container">
+        <div>
+            <label>
+                <input type="checkbox" name="CISC1115" value="CISC1115" >
+                <span>CISC1115
+                    <i class="fa-solid fa-laptop"></i>
+                </span>
+
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="MATH1006" value="MATH1006" >
+                <span>MATH1006
+                    <i class="fa-solid fa-square-root-variable"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="ENGLISH1012"  value="ENGLISH1012" >
+                <span>ENGLISH1012
+                    <i class="fa-solid fa-pencil"></i>
+                </span>
+              
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="MATH1011" value="MATH1011">
+                <span>MATH1011
+                    <i class="fa-solid fa-square-root-variable"></i>
+                </span>
+
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="MATH1201" value="MATH1201">
+                <span>MATH1201
+                    <i class="fa-solid fa-square-root-variable"></i>
+
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC3115" value="CISC3115">
+                <span>CISC3115
+                    <i class="fa-solid fa-code"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC2210" value="CISC2210">
+                <span>CISC2210
+                    <i class="fa-solid fa-dice-two"></i>
+                </span>
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC2820W" value="CISC2820W">
+                <span>CISC2820W
+                    <i class="fa-solid fa-pencil"></i>
+
+                </span>
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="StatsRequirement" value="StatsRequirement">
+                <span>StatsRequirement
+                    <i class="fa-solid fa-chart-simple"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="MATH1206" value="MATH1206">
+                <span>MATH1206
+                    <i class="fa-solid fa-square-root-variable"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC3130" value="CISC3130">
+                <span>CISC3130
+                    <i class="fa-solid fa-database"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC3310" value="CISC3310">
+                <span>CISC3310
+                    <i class="fa-solid fa-laptop-code"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC3140" value="CISC3140">
+                <span>CISC3140
+                    <i class="fa-brands fa-html5"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC3320" value="CISC3320" >
+                <span>CISC3320
+                    <i class="fa-solid fa-terminal"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC3230" value="CISC3230">
+                <span>CISC3230
+                    <i class="fa-solid fa-book"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC3142" value="CISC3142">
+                <span>CISC3142
+                    <i class="fa-solid fa-gears"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="CISC4900" value="CISC4900">
+                <span>CISC4900 or 5001
+                    <i class="fa-solid fa-diagram-project"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="3CSElectives" value="3CSElectives">
+                <span>3CSElectives
+                    <i class="fa-solid fa-bolt"></i>
+                </span>
+
+            </label>
+
+        </div>
+        <div class="button-container">
+            <button type="submit">Submit</button>
+        </div>
+        </div>
+        <h2>The Courses You Have Left Are</h2>
+
+    </form>
+
+   <!--<div class="degree-progress-container">
+        <div class="circular-progress">
+            <span class="progress-value">10%</span>
+        </div>
+        <span class="text">Degree Progress</span>
+    </div>--> 
 
-  <div id="header">
-  <div class = "form-box">
-   <div class ="container">
-    <h2>Schedule Assistant</h2>
-
-<form id="scheduleForm">
-<label for="newMajor">What’s your major?</label>
-<div id="selectedMajorsContainer"></div>
-<div class="inputbox">
-<input type="text" id="newMajor" placeholder="Enter major">
-</div>
-<div class="inputbox">
-<label for="courses">What courses have you taken?</label>
-</div>
-<div id="selectedCoursesContainer"></div>
-<input type="text" id="courses" placeholder="Enter courses">
-<div id="errorContainer" style="color: rgb(240, 253, 253);"></div>
-
-<input type="submit" value="Submit">
-</form>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-<script>
-
-// division of courses by major with pre-requisites 
-const coursesByMajor = {
-"Computer Science": {
-'CISC1115': [],
-'MATH1006': ['CISC1115'],
-'ENGLISH1012' : [],
-'MATH1011': ['MATH1006'],
-'CISC3115': ['CISC1115'],
-'MATH1201': ['MATH1011', 'MATH1006'],
-'MATH1206': ['MATH1201'],
-'StatsRequirement': [['MATH2501'], ['MATH3501']],
-'MATH2501': ['MATH1206'],
-'MATH3501' : ['MATH2201'],
-'CISC2210': ['CISC1115', 'MATH1011', 'MATH1201', 'MATH1012'],
-'CISC3130': ['CISC3115', 'CISC1115'],
-'CISC3310': ['CISC1115', 'CISC2210','CISC3115'],
-'CISC3140': ['CISC1115', 'CIS3115', 'CISC3130'],
-'CISC3142': ['CISC1115', 'CISC3130', 'CISC3310'],
-'CISC3220': ['CISC2210', 'CISC3130', 'MATH1201'],
-'CISC3230': ['CISC2210', 'CISC3130', 'MATH1201'],
-'CISC3320': ['CISC3305', 'CISC3310', 'CISC3130', 'CISC3315'],
-'CISC2820W':['CISC1115','ENGLISH1012'],
-'CISC4900': ['CISC3130', 'CISC3142'], // 2 COURSES GREATER THAN 3000 ,
-'3AdvancedCSElectives': ['3130']
-// create a method that checks for more than 1 course greater than 3000?
-}
-
-
-,"Multimedia Computing": {
-'CISC1115': [],
-'CISC1600': [],
-'MATH1006': ['CISC1115'],
-'MATH1011': ['MATH1006'],
-'CISC3115': ['CISC1115'],
-'MATH1201': ['MATH1011', 'MATH1006'],
-'MATH1206': ['MATH1201'],
-'StatsRequirement': [['MATH2501'], ['MATH3501']],
-'MATH2501': ['MATH1206'],
-'MATH3501' : ['MATH2201'],
-'CISC2210': ['CISC1115', 'MATH1011', 'MATH1201', 'MATH1012'],
-'CISC3130': ['CISC3115', 'CISC1115'],
-'CISC3310': ['CISC1115', 'CISC2210','CISC3115'],
-'CISC3630': ['CISC3130'],
-'CISC3142': ['CISC1115', 'CISC3130', 'CISC3310'],
-'CISC3220': ['CISC2210', 'CISC3130', 'MATH1201'],
-'CISC3230': ['CISC2210', 'CISC3130', 'MATH1201'],
-'CISC3620': ['CISC3130', 'MATH1201'],
-'CISC2820W':['CISC1115','ENGLISH1012']
-  }
-
-  ,"Information Systems": { 
-'ACT2001': [],
-'CISC1115': [],
-'MATH1011': ['MATH1006'],
-'CISC1050':[],
-'BUSN3200' : [],
-'CISC1590':['CISC1050'],
-'CISC3115': ['CISC1115'],
-'CISC3130': ['CISC3115', 'CISC1115'],
-'CISC2820W':['CISC1115','ENGLISH1012'],
-'FIN3310':['ACT2001'],
-'CISC3810': ['CISC3130'],
-'BUSN2200':['MATH1011'],
-'BUSN3400':['MATH1011'],
-'CISC2531':['BUSN3400'],
-'CISC1580':['BUSN3400'],
-  }
-/*
-STATS REQUIREMENT
-(BUSN 3400/ECON 3400) ‐or‐
-(MATH 2501 ‐or‐ MATH 3501) ‐or‐
-(PSYC 3400)
-IS MAJOR STILL NOT COMPLETED MUST DO (OR CASES)
-*/ 
-,"Biology BS": { 
-  'BIOLOGY1001': [],
-  'BIOOLOGY1002':['BIOLOGY 1001'],
-  'BIOLOGY3003' : ['BIOLOGY 1001','BIOLOGY 1001'],
-  'BIOLOY3004': ['BIOLOGY 1001','BIOLOGY 1002','BIOLOY3003'], // BIOLOGY3003 CAN ALSO BE A CO-REQ
-  'BIOLOGY3006' :['BIOLOGY 1001','BIOLOGY 1002', 'BIOLOGY3011'],
-  'BIOLOGY3007W' :['BIOLOGY1001','BIOLOGY1002','BIOLOGY3011','ENGLISH1012'],
-  'BIOLOGY3011' :['BIOLOGY1001','BIOLOGY1002','BIOLOGY3003'],
-  'CHEM2110': [],
-   'CHEM 3521':[],
-   'CHEM 3522' : [],
-   'CHEM1100' : [], // OR CHEM 1050 AND 20250
-   
-
-
-
-
-  }
-}
-
-
-// function to check the remaining number of courses based on user-entered coursesTaken
-// this will also push pre-requisities for each course based on the assignemnt
-function checkRemainingCourses(major, coursesTaken) {
-
-  console.log(coursesTaken);
-
-  const remainingCourses = [];
-  const courses = coursesByMajor[major];
-
-  for (const course in courses) {
-    if (!coursesTaken.includes(course)) {
-      remainingCourses.push(course); 
-    }
-    else {
-      const prerequisites = getPrerequisites(course, major);
-   
-      prerequisites.forEach(prereq => {
-        // If any prerequisites are missing, add them to coursesTaken
-          if (!coursesTaken.includes(prereq)) {
-            coursesTaken.push(prereq);
-
-            let index  = remainingCourses.indexOf(prereq);
-            if(index !== -1){
-              remainingCourses.splice(index, 1)
-            }
-          }
-        });
-    }
-  }
-  
-  // Check prerequisites for the current course   
-  
-
-  return {
-    remainingCourses: remainingCourses,
-    updatedCoursesTaken: coursesTaken
-  };
-}
-
-
-
-// get prerequisites based on map for each course
-function getPrerequisites(course, major) {
-  return coursesByMajor[major][course] || [];
-} 
-
-// suggest the next group of courses students should take according to their major
-function suggestNextCoursesAfter(major, remainingCourses, coursesTaken) {
-  const suggestedCourses = [];
-
-  for (let i = 0; i < remainingCourses.length && suggestedCourses.length < 5; i++) {
-    const course = remainingCourses[i];
-
-    const prerequisites = getPrerequisites(course, major);
-    const allPrerequisitesTaken = prerequisites.every(prereq => coursesTaken.includes(prereq));
-
-    if (allPrerequisitesTaken) {
-      suggestedCourses.push(course);
-    }
-  }
-
-  return suggestedCourses;
-}
-
-
-// form function! 
-document.getElementById("scheduleForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent form submission
-
-  // SELECT YOUR MAJOR 
-  var newMajor = document.getElementById("newMajor").value.trim();
-  var isMajorAvailable = true; // Assume major is available by default
-
-  // Check if the major is available
-  if (!(newMajor in coursesByMajor)) {
-    isMajorAvailable = false;
-    var errorContainer = document.getElementById("errorContainer");
-    errorContainer.innerHTML = "Error: This major is currently not available";
-  } else {
-    // If the major is available, clear the error message
-    var errorContainer = document.getElementById("errorContainer");
-    errorContainer.innerHTML = "";
-  }
-
-  if (isMajorAvailable) {
-    // Check if the major element is already added
-    var majorAdded = document.getElementById("selectedMajorsContainer").querySelector(".selected-option");
-
-    if (!majorAdded) {
-      // Create a new element to display the selected major
-      var majorElement = document.createElement("div");
-      majorElement.className = "selected-option";
-      majorElement.innerHTML = 'x ' + newMajor;
-
-      // Add a click event to remove the major when clicked
-      majorElement.addEventListener("click", function() {
-        this.remove();
-        // Enable the major input field again
-        document.getElementById("newMajor").removeAttribute("disabled");
-      });
-
-      // Append the new element to the container
-      document.getElementById("selectedMajorsContainer").appendChild(majorElement);
-
-      // Disable the input field after selection
-      document.getElementById("newMajor").setAttribute("disabled", "true");
-    }
-
-    // COURSES SELECTION 
-    var coursesForMajor = coursesByMajor[newMajor]; // Get courses for the major
-
-    // Check if coursesForMajor is an object and not undefined
-    if (typeof coursesForMajor === 'object' && coursesForMajor !== null) {
-      var validCourses = Object.keys(coursesForMajor);
-
-      var coursesInput = document.getElementById("courses").value.trim();
-
-      if (coursesInput !== "") {
-        var coursesArray = coursesInput.split(",").map(course => course.trim());
-
-        // Validate each course
-        var errorFound = false;
-        coursesArray.forEach(course => {
-          if (!validCourses.includes(course)) {
-            var errorContainer = document.getElementById("errorContainer");
-            errorContainer.innerHTML = "Error: Course " + course + " is invalid for " + newMajor;
-            errorFound = true;
-          }
-        });
-
-        if (!errorFound) {
-          var coursesContainer = document.getElementById("selectedCoursesContainer");
-          coursesArray.forEach(course => {
-            var courseElement = document.createElement("div");
-            courseElement.className = "selected-option";
-            courseElement.innerHTML = 'x ' + course;
-            coursesContainer.appendChild(courseElement);
-          });
-
-          // Clear the input field and disable it after selection
-          document.getElementById("courses").value = "";
-          document.getElementById("courses").removeAttribute("disabled");
-
-          // Calculate and display remaining courses
-          var checkRemainingResult = checkRemainingCourses(newMajor, coursesArray);
-          var remainingCourses = checkRemainingResult.remainingCourses;
-          var updatedCoursesTaken = checkRemainingResult.updatedCoursesTaken;
-
-          var remainingCoursesContainer = document.createElement("div");
-          remainingCoursesContainer.className = "schedule";
-          remainingCoursesContainer.innerHTML = "<strong>Total Remaining Courses:</strong> " + remainingCourses.join(', ');
-          document.getElementById("scheduleForm").appendChild(remainingCoursesContainer);
-
-          var nextSemesterSchedule = suggestNextCoursesAfter(newMajor, remainingCourses, coursesArray);
-         
-          var nextSemContainer = document.createElement("div");
-          nextSemContainer.className = "nextSem";
-          nextSemContainer.innerHTML = "<strong>You should take the next courses:</strong> " + nextSemesterSchedule.join(', ');
-          document.getElementById("scheduleForm").appendChild(nextSemContainer);
-
-          // Use updatedCoursesTaken as needed
-        }
-      }
-    }
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-</script>
 
 </body>
-
-</html>
