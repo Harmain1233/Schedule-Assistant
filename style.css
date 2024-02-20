@@ -1,79 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
-
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
-    color: whitesmoke; /* Adjust text color for better contrast */
-    background-image:  url(aesthetic3.jpeg); 
-    background-repeat: no-repeat;
-    background-size: cover; 
+body{
+   background: black;
+    /*background: #0b0707;*/
+    font-family: 'Poppins', san-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+h1{
+    color: white;
+    text-align: center;
+}
+
 
 h2{
-    margin-left: 45px;
-
-
-}
-
-.form-box{
-    position: absolute;
-    width: 400px;
-    height: 500px;
-    text-align: left;
-    background: transparent;
-    border: 2px solid rgba(230, 10, 57, 0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(5px); 
-    display: flex;
-    justify-content: left;
-    margin-left: 60px;
-    align-items: center;
-
-}
-
-label {
-display: block;
-margin: 10px 0;
-}
-
-input[type="text"] {
-width: 100%;
-padding: 8px;
-box-sizing: border-box;
-}
-
-.selected-option {
-    background-color: rgb(249, 77, 77);
-    padding: 5px;
-    border-radius: 5px;
-    display: inline-block;
-    cursor: pointer;
-    }
-
-input[type="checkbox"] {
-margin-right: 5px;
-}
-
-input[type="submit"] {
-background-color: rgb(255, 55, 55);
-color: white;
-padding: 10px 15px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 16px;
-}
-
-.schedule {
-margin-top: 20px;
-}
-
-p {
-    margin-top: 50px; /* Add space above the paragraph */
+    color: white;
+    text-align: center;
 }
 
 h3{
-  text-align: center;
+    color: white;
+    text-align: center;
 }
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container div {
+    margin: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.container div label {
+    cursor: pointer;
+}
+
+.schedule{
+    background: white;
+    padding: 10px;
+}
+
+
+.container div label span{
+    position: relative;
+    display: inline-block;
+    background: #424242;
+    padding: 15px 30px;
+    color: #555;
+    text-shadow: 0 1px 4px rgba(0,0,0,.5);
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+
+}
+
+.container div label span:before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255,255,255,255,1);
+}
+
+.container div label input[type="checkbox"]:checked ~ span {
+    background: #fefefe;
+}
+
+.button-container button{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    background:  #555;
+    transition: 0.5s;
+       
+}
+
+
+.button-container button:hover{
+    background: rgb(232, 235, 232);
+
+
+}
+.degree-progress-container{
+    display: flex;
+    width: 420px;
+    padding: 50px 0;
+    border-radius: 8px;
+    background: #fff;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.circular-progress{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #7d2ae8;
+}
+
 
