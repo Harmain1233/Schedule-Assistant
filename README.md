@@ -1,4 +1,4 @@
-# Schedule-Assistant (WIP)
+# Schedule-Assistant 
 Your assistant to all scheduling problems you have while choosing Computer Science classes for each semester.
 
 ## About the Project
